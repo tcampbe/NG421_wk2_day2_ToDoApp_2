@@ -1,9 +1,9 @@
 ## Intro
-This project is our Todo app as we should have completed it from the last project. We are now going to practice continue building it out to practice our skills.
+This project is our Todo app as we should have completed it from the last project. We are now going to continue building it out to practice our skills.
 
 
 ## Setup
-1. For, clone, npm i, npm start
+1. Fork, clone, npm i, npm start
 
 ## Code a Model
 
@@ -66,7 +66,7 @@ This project is our Todo app as we should have completed it from the last projec
       @Component({
         selector: 'confirmation-modal',
         templateURL: './confirmation-modal.component.html',
-        styleUrls: ['./confirmation-modal.component.scss']
+        styleUrls: ['./confirmation-modal.component.css']
       })
     ```
 
@@ -267,8 +267,12 @@ This project is our Todo app as we should have completed it from the last projec
 
 ******
 
-### [Follow-up Video](https://youtu.be/nbFmHD4T04k?t=1345)
+### Follow-up Video
 
-<iframe src="https://player.vimeo.com/video/364364863" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+[Passing Data From Your Modal](https://player.vimeo.com/video/364364863)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nbFmHD4T04k?start=1345" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/nbFmHD4T04k/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+
+
+ 

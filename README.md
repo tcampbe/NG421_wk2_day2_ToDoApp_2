@@ -271,7 +271,7 @@ This project is our Todo app as we should have completed it from the last projec
 
 [Passing Data From Your Modal](https://player.vimeo.com/video/364364863)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/nbFmHD4T04k/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/nbFmHD4T04k/0.jpg)](https://youtu.be/nbFmHD4T04k?t=1345)
 
 
 

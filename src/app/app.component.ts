@@ -9,7 +9,7 @@ export class AppComponent implements OnInit{
   title = 'Todos';
   todoList: any [] = [];
   todoTitle: string;
-
+  todoId: number = 0;
   ngOnInit() {
     this.todoTitle = '';
     this.todoList = [

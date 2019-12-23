@@ -83,7 +83,7 @@ This project is our Todo app as we should have completed it from the last projec
 ```
 1. Adjust all code to use the todo service and the account for @Input().
 1. Make sure the components appear in the webpage by using them where appropriate.
-
+1. When completed, the app component should do nothing but decide where components appear. (No code in app.component.ts)
 
 ## Code a Modal
 1. We need to remember how to code an Angular Bootstrap modal that should appear when the delete button is clicked.

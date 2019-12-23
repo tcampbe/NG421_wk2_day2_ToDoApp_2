@@ -14,9 +14,7 @@ This project is our Todo app as we should have completed it from the last projec
       export interface ITodo {
         id: number;
         title: string;
-        isDone: boolean;
-        isDoing: boolean;
-        isEditing: boolean;
+        description: string;
       }
     ```
 
@@ -41,9 +39,7 @@ This project is our Todo app as we should have completed it from the last projec
         this.todoList.push({
           id: this.todoId,
           title: this.todoTitle,
-          isDone: false,
-          isDoing: false,
-          isEditing: false,
+          description: ''
         });
 
         this.todoTitle = '';
@@ -53,6 +49,7 @@ This project is our Todo app as we should have completed it from the last projec
     ```
 
 1. You might want to change what is in your `ngOnInit()` method too...
+1. We need to change all references of a todo to utilize this interface. Class properties, function arguments and return types
 
 ## Code a Service
 1. Create a service folder and file in you Todo App: `ng generate service services/todo`

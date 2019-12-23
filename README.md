@@ -1,5 +1,5 @@
 ## Intro
-This project is our Todo app as we should have completed it from the last project. We are now going to continue building it out to practice the skills we've learned this week. We have a senstive situation in allowing users to delete todos. We need to confirm that they really want the delete to happen. A modal to the rescue.
+This project is our Todo app as we should have completed it from the last project. We are now going to continue building it out to practice the skills we've learned this week. We need to break up our app into components. We need to share data between those components with a service. We have a senstive situation in allowing users to delete todos. We need to confirm that they really want the delete to happen. A modal to the rescue.
 
 
 ## Setup
@@ -54,8 +54,42 @@ This project is our Todo app as we should have completed it from the last projec
 
 1. You might want to change what is in your `ngOnInit()` method too...
 
+## Code a Service
+1. Create a service folder and file in you Todo App: `ng generate service services/todo`
+1. Refactor your code so that all functionality of todos is moved to the service
+1. The `todoList` array, `addTodo(todo)`, `deleteTodo(todo)`, `getTodos`
+1. We will now need to use depedency injection in the components to use this service.
+
+## Make Components
+1. We shouldn't be coding todo functionality in the app component
+1. Create three components: `Todo`, `CreateTodo` and `TodoList`
+1. `Todo` should handle everything for one todo
+```
+<div class="view">
+    <label>{{todo.title}}</label>
+    <div class="float-right">
+        <button type="button" (click)= deleteTodo(todo) class="btn btn-danger btn-sm">Delete</button>
+    </div>
+</div>
+```
+1. `CreateTodo` should be the input 
+```
+<input type="text" class="todo-input" placeholder="Add next todo here" [(ngModel)]="todoTitle" (keyup.enter)=addTodo()>
+```
+1. Make sure `CreateTodo` handles creating a new todo
+1. `TodoList` should be the ul and li
+```
+<ul align="center" class="list-group">
+  <li class="list-group-item" *ngFor="let todo of todoList">
+  </li>
+</ul>
+```
+1. Adjust all code to use the todo service and the account for @Input().
+1. Make sure the components appear in the webpage by using them where appropriate.
+
+
 ## Code a Modal
-1. We need to remember how to code an Angular Bootstrap modal.
+1. We need to remember how to code an Angular Bootstrap modal that should appear when the delete button is clicked.
 1. Use your notes from the pre work videos or your own project as a reference. 
 1. You could even use the source documentation.  [Docs](https://ng-bootstrap.github.io/#/getting-started)
 1. Complete the steps to setup
@@ -85,7 +119,7 @@ This project is our Todo app as we should have completed it from the last projec
     ```
 1. Give the ConfirmationModal the ability to control itself with a property `modalInstance`
 1. When the yes button is clicked, close the modal and send a result of "yes". `this.modalInstance.close("yes")`
-1. Code `app.component.ts`
+1. Code `todo.component.ts`
     1. Import `NgbModal` and use dependency injection on it.
     1. Make `deleteTodo` an async method.
     1. Open the modal when `deleteTodo is called`

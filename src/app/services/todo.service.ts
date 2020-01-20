@@ -10,10 +10,8 @@ export class TodoService {
   todoTitle: string;
   todoId: number = 0;
 
-  constructor() {
+  constructor() {}
 
-  }
-  
   addTodo(): void {
     this.todoList.push({
       id: this.todoId,
@@ -30,7 +28,7 @@ export class TodoService {
     this.todoList.splice(index, 1);
   }
 
-  getTodos(){
+  getTodos() {
     return this.todoList;
   }
 }

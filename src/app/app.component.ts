@@ -7,7 +7,7 @@ import { TodoService } from "./services/todo.service";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = "Todos";
   todoList: ITodo[] = [];
   todoTitle: string;
@@ -23,8 +23,7 @@ export class AppComponent implements OnInit{
         id: 1,
         title: "Install Angular CLI",
         description: "npm install -g @angular/cli"
-      },
+      }
     ];
   }
 }
-

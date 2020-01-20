@@ -8,7 +8,7 @@ import { ITodo } from '../interfaces/itodo';
   styleUrls: ['./create-todo.component.css']
 })
 export class CreateTodoComponent implements OnInit {
-  
+  text: string;
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {

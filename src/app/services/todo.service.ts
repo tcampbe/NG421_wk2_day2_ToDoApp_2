@@ -1,12 +1,15 @@
 import { Injectable, OnInit } from "@angular/core";
 import { ITodo } from "../interfaces/itodo";
+import { Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: "root"
 })
 export class TodoService {
   title = "Todos";
-  todoList: ITodo[] = [];
+  todoList: ITodo[] = [
+    {id:1, title:"install angular cli", description: "test"}
+  ];
   todoTitle: string;
   todoId: number = 0;
 

@@ -1,6 +1,5 @@
 import { Injectable, OnInit } from "@angular/core";
 import { ITodo } from "../interfaces/itodo";
-import { Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: "root"
@@ -15,9 +14,9 @@ export class TodoService {
 
   constructor() {}
 
-  addTodo(): void {
+  addTodo(title: string): void {
     this.todoList.push({
-      id: this.todoId,
+      id: this.todoId++,
       title: this.todoTitle,
       description: ""
     });

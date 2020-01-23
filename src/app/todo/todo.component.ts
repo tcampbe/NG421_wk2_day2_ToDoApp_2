@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { ITodo } from "../interfaces/itodo";
 import { TodoService } from "../services/todo.service";
+import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';
+
 
 @Component({
   selector: "app-todo",
@@ -10,9 +12,16 @@ import { TodoService } from "../services/todo.service";
 export class TodoComponent implements OnInit {
   @Input() todo: ITodo;
 
-  constructor(private todoService: TodoService) {}
+  constructor(
+    private todoService: TodoService,
+    private confirmationModalService: ConfirmationModalComponent
+    ) {}
 
   ngOnInit() {
-    this.todo = this.todo;
   }
+
+  async deleteTodo() {
+    const result = await this.confirmationModalService.show();
+  }
+
 }

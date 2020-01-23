@@ -5,32 +5,27 @@ import { ITodo } from "../interfaces/itodo";
   providedIn: "root"
 })
 export class TodoService {
-  title = "Todos";
   todoList: ITodo[] = [
-    {id:1, title:"install angular cli", description: "test"}
+    { id: 1, title: "Install Angular CLI", description: "false" }
   ];
-  todoTitle: string;
-  todoId: number = 0;
+  todoId = 0;
 
   constructor() {}
 
   addTodo(title: string): void {
     this.todoList.push({
       id: this.todoId++,
-      title: this.todoTitle,
+      title,
       description: ""
     });
-
-    // resets our todoTitle variable to an empty string
-    this.todoTitle = "";
-    this.todoId++;
   }
-  deleteTodo(todo: any) {
+
+  deleteTodo(todo: ITodo) {
     const index = this.todoList.findIndex(todoItem => todoItem === todo);
     this.todoList.splice(index, 1);
   }
 
-  getTodos() {
+  getTodos(): ITodo[] {
     return this.todoList;
   }
 }
